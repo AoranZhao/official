@@ -1,0 +1,23 @@
+@import '../containers/config.scss';
+
+.section_frame {
+    width: 100vw;
+
+    .section_body_frame {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 753px) { 
+    .section_body_frame {
+        width: 753px;
+    }
+}
+
+@media only screen and (min-width: 754px) {
+    .section_body_frame {
+        min-width: 754px;
+        max-width: 1200px;
+    }
+}

@@ -1,0 +1,39 @@
+@import '../containers/config.scss';
+
+.foot_frame {
+    width: 100vw;
+    background-color: $background-default-color;
+}
+
+.foot_body_frame {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foot_body_frame_min {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 753px) {
+    .foot_body_frame {
+        display: none;
+    }
+
+    .foot_body_frame_min {
+        max-width: 753px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 753px) {
+    .foot_body_frame {
+        min-width: 754px;
+        max-width: 1200px;
+        display: block;
+    }
+
+    .foot_body_frame_min {
+        display: none;
+    }
+}

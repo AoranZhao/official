@@ -1,0 +1,74 @@
+@import '../containers/config.scss';
+
+$nav_height: 60px;
+
+.nav_frame_bg {
+    height: 100px
+}
+
+.nav_frame {
+    width: 100vw;
+    overflow: hidden;
+    z-index: 10;
+
+    .nav_bg {
+        // background-color: $background-default-color;
+        // color: white;
+
+        .logo_frame {
+            height: $nav_height;
+            margin-left: 20px;
+
+            img {
+                margin-top: 3px;
+                height: calc(100% - 6px);
+            }
+        }
+    
+        .menu_frame {
+            height: $nav_height;       
+            margin-right: 20px;
+            
+            .menu_bg {
+                margin-top: 11px;
+                background-color: white;
+                float: right;
+            }
+
+            .drawer_bg {
+                float: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 753px) {
+    .nav_body_frame {
+        max-width: 753px;
+    }
+
+    .menu_frame {
+        display: none;
+    }
+
+    .menu_frame_min {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 754px) {
+    .nav_body_frame {
+        min-width: 754px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .menu_frame {
+        display: block;
+    }
+
+    .menu_frame_min {
+        display: none;
+    }
+}

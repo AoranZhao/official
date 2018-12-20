@@ -1,0 +1,24 @@
+.detailtab_frame_bg {
+    width: '100vw';
+    background-color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.detailtab_frame {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 753px) {
+    .detailtab_frame {
+        width: 753px;
+    }
+}
+
+@media only screen and (min-width: 754px) {
+    .detailtab_frame {
+        min-width: 754px;
+        max-width: 1200px;
+    }
+}

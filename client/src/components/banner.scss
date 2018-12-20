@@ -1,0 +1,43 @@
+@import '../containers/config.scss';
+
+.banner_frame_bg {
+    width: '100vw';
+    height: 300px;
+    background-color: white;
+
+    .banner_frame {
+        height: 100%;
+        background-color: $background-default-color;
+    }
+}
+
+.banner_body_frame {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    .banner-title {
+        font-size: 32px;
+        padding-top: 150px;
+    }
+
+    .banner-subtitle {
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 753px) {
+    .banner_body_frame {
+        max-width: 753px;
+    }
+}
+
+@media only screen and (min-width: 754px) {
+    .banner_body_frame {
+        min-width: 754px;
+        max-width: 1200px;
+    }
+}

@@ -9,7 +9,7 @@ var _bodyParser = _interopRequireDefault(require("body-parser"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express.default)();
-var PORT = 2992;
+var PORT = 2990;
 app.use(_express.default.static(_path.default.join(__dirname, '../../client/dist')));
 app.use('/video', _express.default.static(_path.default.join(__dirname, '../static')));
 app.use('/icon', _express.default.static(_path.default.join(__dirname, '../../client')));

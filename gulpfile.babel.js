@@ -36,4 +36,4 @@ gulp.task('watch:js', () => {
 
 gulp.task('watch', gulp.parallel('watch:server', 'watch:js'));
 
-gulp.task('default', gulp.parallel('dist', 'watch'));
+gulp.task('default', gulp.parallel('dist'));

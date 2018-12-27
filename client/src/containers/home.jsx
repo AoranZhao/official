@@ -20,6 +20,10 @@ const Meta = Card.Meta;
 import DRL from '../static/images/DRL.gif';
 import Drone from '../static/images/Drone.gif';
 import Explain from '../static/images/Explain.gif';
+import Lightbulb from '../static/images/lightbulb.png';
+import NewRetail from '../static/images/newRetail_large.png';
+import Brain from '../static/images/brain_large.png';
+import Edit from '../components/logo.jsx';
 
 import './home.scss';
 import '../assets/rc-texty.css';
@@ -31,6 +35,7 @@ class HomePage extends Component {
         this.textyEnter = this.textyEnter.bind(this);
         this.textySplit = this.textySplit.bind(this);
         this.sectionTwo = this.sectionTwo.bind(this);
+        this.sectionThree = this.sectionThree.bind(this);
     }
 
     sectionOne() {
@@ -217,11 +222,77 @@ class HomePage extends Component {
         </div>
     }
 
+    sectionThree() {
+        return <div className="section_frame">
+            <div className="section_frame_bg" style={{ width: '100%', backgroundColor: 'white' }}>
+                <OverPack className="section_body_frame" style={{ marginTop: '30px', marginBottom: '30px', height: '500px' }}>
+                    <Row>
+                        <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                            <div style={{ textAlign: 'center', margin: '40px 60px' }}>
+                                <TweenOne animation={{ y: 50, opacity: 0, type: 'from', duration: 800 }}>
+                                    <Divider style={{ fontSize: '24px' }}>Product</Divider>
+                                </TweenOne>
+                                <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200, duration: 800 }}>
+                                    <p>Learnable is providing piercing, practical, and personalized solutions depending on your demand. Our advanced AI technologies have been applied to three major domains. Education, Retail, and Others.</p>
+                                </TweenOne>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={1} sm={1} md={2} lg={3} xl={4}></Col>
+                        <Col xs={22} sm={22} md={20} lg={18} xl={16}>
+                            <Row>
+                                <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                    <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 400, duration: 800 }}>
+                                        <Card
+                                            hoverable
+                                            style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
+                                            cover={<img src={Lightbulb} />}>
+                                            <Meta
+                                                title="Education"
+                                                description="AI empowers streamlined teaching & personalized Learning. Star Products: Automatic Grading AI, Educational Content Recognition." />
+                                        </Card>
+                                    </TweenOne>
+                                </Col>
+                                <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                    <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 600, duration: 800 }}>
+                                        <Card
+                                            hoverable
+                                            style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
+                                            cover={<img src={NewRetail} />}>
+                                            <Meta
+                                                title="New Retail"
+                                                description="AI unlocks Offline-to-Online solutions. Star Products: Intention Recognition, Personalized Recommendation." />
+                                        </Card>
+                                    </TweenOne>
+                                </Col>
+                                <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                    <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 500, duration: 800 }}>
+                                        <Card
+                                            hoverable
+                                            style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
+                                            cover={<img src={Brain} />}>
+                                            <Meta
+                                                title="Other"
+                                                description="AI promises a better future for many industries. Star Products: Duckietown AI course, TCM Robot." />
+                                        </Card>
+                                    </TweenOne>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col xs={1} sm={1} md={2} lg={3} xl={4}></Col>
+                    </Row>
+                </OverPack>
+            </div>
+        </div>
+    }
+
     render() {
         return <div>
             <Nav selectedKey="home" />
             {this.sectionOne()}
             {this.sectionTwo()}
+            {this.sectionThree()}
             <Foot />
         </div>
     }

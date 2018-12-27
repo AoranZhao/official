@@ -3,7 +3,7 @@ import path from 'path';
 import bodyParser from 'body-parser';
 
 let app = express();
-const PORT = 2992;
+const PORT = 2990;
 
 app.use(express.static(path.join(__dirname, '../../client/dist')));
 app.use('/video', express.static(path.join(__dirname, '../static')));
